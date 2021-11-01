@@ -1,3 +1,20 @@
+list = ["a", "a", "a", "a", "b", "b", "b", "d", "d", "d", "d"]
+
+def unik_list(list):
+    x = []
+    for a in list:
+      if a not in x:
+        x.append(a)
+    return x 
+
+print(unik_list(list)) 
+
+
+
+
+
+
+
 #1.uzd
 
 s = "hello"
