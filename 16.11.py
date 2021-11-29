@@ -21,7 +21,7 @@ class Rekins():
 
    self.teksta_gar = len(self.veltijums)
    self.ladites_izm = self.izmers.split(",")
-   print(self.ladites_izm)
+   #print(self.ladites_izm)
 
    self.augstums = int(self.ladites_izm[0])
    self.garums = int(self.ladites_izm[1])
@@ -37,6 +37,9 @@ class Rekins():
    print(f"\x1B[3mmateriala cena EUR/m2:\x1B[0m \033[1,32m{self.materials}\033[1;0m")
    print(f"\x1B[3mizmaksas:\x1B[0M \033[1;32M{self.aprekins()}\033[1;0m")
 
+   self.saglabat()
+   print(f"klienta dati saglabati faila {self.klients}.csv")
+
  def aprekins (self):
    darba_samaksa = 15
    PVN = 21
@@ -44,11 +47,19 @@ class Rekins():
    PVN_summa = (produkta_cena + darba_samaksa) *PVN/100
    rekina_summa = (produkta_cena + darba_samaksa) + PVN_summa
    return rekina_summa
+  
+ def saglabat (self):
+
+   import csv
+
+   with open(f"{self.klients}.csv", "w", newline ="") as file:
+     writer = csv.writer(file)
+     writer.writerow = (["klienta vards","veltijums","izmers","materiala cena"])
+
+
 
 Rekins = Rekins(klients,veltijums,izmers,materials)
 print(Rekins.izdruka())
-
-
 
 
 
