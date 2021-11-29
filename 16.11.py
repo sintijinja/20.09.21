@@ -51,6 +51,7 @@ print(Rekins.izdruka())
 
 
 
+
 # print(izmeri)
 # print(type(izmeri))
 # print(izmeri.split(","))
