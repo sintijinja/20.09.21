@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
  
 lapa = requests.get("https://vvsprogramm.github.io/A/")
+
 # print(lapa)
 # #print(lapa.content)
  

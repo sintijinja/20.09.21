@@ -1,2 +1,2 @@
 language = "python3"
-run = "python 17.01.py"
+run = "python 18.01/divi.py"
